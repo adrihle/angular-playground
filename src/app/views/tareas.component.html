@@ -1,0 +1,19 @@
+<h2 class="text-center">Lista de tareas por colores</h2>
+
+<div class="row">
+        <div class="col-md-4 text-center">
+            <button (click)='color = "blue"' class="btn btn-primary">Cambiar azul</button>
+        </div>
+        <div class="col-md-4" id="color-notice">
+            <h5 [ngStyle]='{color:color}'>Color seleccionado: {{color}}</h5>
+        </div>
+        <div class="col-md-4 text-center">
+            <button (click)='color = "red"'class="btn btn-danger">Cambiar rojo</button>
+        </div>
+</div>
+
+<div class="row">
+    <div *ngFor='let tarea of tareas' class='col-lg-3 col-md-4 col-sm-6'>
+
+    </div>
+</div>

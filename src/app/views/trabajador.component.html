@@ -1,0 +1,19 @@
+<h2 class="text-center">Lista de trabajadores</h2>
+
+<div class="text-center">
+    <button (click)='toggle()' class="btn btn-success text-center">Mostrar {{!search ? '' : 'no'}} contratados</button>
+</div>
+
+<div class="row">
+    <div *ngFor="let item of filtro(worker); let i=index" class='col-lg-3 col-md-4 col-sm-6'>
+        <div class="text-center mt-3 worker d-flex justify-content-center">
+            <ul class="list-group">
+                <h5 class='m-4'><strong>Trabajador: </strong>{{i + 1}}</h5>
+                <li class="list-group-item text-center"><strong>Nombre: </strong> {{item.name}}</li>
+                <li class="list-group-item text-center"><strong>Apellido: </strong>{{item.surname}}</li>
+                <li class="list-group-item text-center"><strong>Edad: </strong>{{item.age}}</li>
+                <li class="list-group-item text-center"><strong>Oficio: </strong>{{item.position}}</li>
+            </ul>
+        </div>
+    </div>
+</div>
